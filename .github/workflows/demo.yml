@@ -41,4 +41,7 @@ jobs:
       - name: Output
         run: ls
       - name: Deploy
-        run: echo "Deploying..."
+        run: |
+          echo "Deploying..."
+          echo "Secrets: ${{secrets.PASSWORD}}"
+          echo "Var: ${{vars.NAME}}"
